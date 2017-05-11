@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="261.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="54.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/84850-cow-head.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="66.0" layoutY="216.0" prefHeight="23.0" prefWidth="131.0" text="SUKPRASERT FARM">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="cowPane" accessibleText="cowMenu" layoutY="454.0" prefHeight="50.0" prefWidth="261.0">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="21.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/58777-cow-face-front.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" prefHeight="17.0" prefWidth="169.0" text="COW MANAGEMENT" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sellPane" accessibleText="sellMenu" layoutY="504.0" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #e7474d;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="21.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/history-clock-reload-refresh-recycle-schedule-3e8ff44e647e13b6-512x512.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" prefHeight="17.0" prefWidth="169.0" text="SELLING HISTORY" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="setPane" accessibleText="setMenu" layoutY="554.0" prefHeight="50.0" prefWidth="261.0">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="21.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/settings-icon-16.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" prefHeight="17.0" prefWidth="169.0" text="INFORMATION SETTING" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sumPane" accessibleText="sumMenu" layoutY="604.0" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #e7474d;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="21.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/money-dollar-circle-512.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="17.0" prefHeight="17.0" prefWidth="169.0" text="SELLING SUMMARIZE" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <JFXTextArea editable="false" focusColor="#e7474d" layoutX="23.0" layoutY="254.0" prefHeight="125.0" prefWidth="218.0" text="                   FEATURES.&#10;       --BUSINESS FUNCTION--&#10;        --COW MANAGEMENT--&#10;           --SELLING HISTORY--&#10;     --INFORMATION SETTING--&#10;       --SELLING SUMMARIZE--" />
+      <JFXButton accessibleText="logMenu" layoutX="54.0" layoutY="673.0" prefHeight="27.0" prefWidth="150.0" ripplerFill="WHITE" style="-fx-background-color: #e7474d;" text="QUIT" textFill="WHITE" />
+      <AnchorPane fx:id="businessPane" accessibleText="businessMenu" layoutY="404.0" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #e7474d;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="21.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/handshake_78914.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="76.0" layoutY="17.0" prefHeight="17.0" prefWidth="169.0" text="BUSINESS FUNCTION" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

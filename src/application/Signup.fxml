@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="385.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpController">
+   <children>
+      <JFXTextField fx:id="nameField" focusColor="#e7474d" labelFloat="true" layoutX="41.0" layoutY="77.0" prefHeight="27.0" prefWidth="193.0" promptText="Enter Name" />
+      <Label layoutX="33.0" layoutY="26.0" prefHeight="36.0" prefWidth="66.0" text="SIGN UP">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="7.0" layoutX="103.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="372.0" />
+      <JFXTextField fx:id="surnameField" focusColor="#e7474d" labelFloat="true" layoutX="250.0" layoutY="77.0" prefHeight="27.0" prefWidth="193.0" promptText="Enter Surname" />
+      <JFXTextField fx:id="idField" focusColor="#e7474d" labelFloat="true" layoutX="41.0" layoutY="129.0" prefHeight="27.0" prefWidth="195.0" promptText="Enter Personal ID." />
+      <JFXDatePicker fx:id="dateField" defaultColor="#e7474d" layoutX="250.0" layoutY="127.0" prefHeight="29.0" prefWidth="230.0" promptText="Birth Date" />
+      <JFXTextField fx:id="addressField" focusColor="#e7474d" labelFloat="true" layoutX="41.0" layoutY="178.0" prefHeight="27.0" prefWidth="404.0" promptText="Enter Address" />
+      <JFXTextField fx:id="phoneField" focusColor="#e7474d" labelFloat="true" layoutX="41.0" layoutY="227.0" prefHeight="27.0" prefWidth="193.0" promptText="Enter Phone Number" />
+      <JFXTextField fx:id="usernameField" focusColor="#e7474d" labelFloat="true" layoutX="41.0" layoutY="271.0" prefHeight="27.0" prefWidth="193.0" promptText="Username" />
+      <JFXTextField fx:id="passwordField" focusColor="#e7474d" labelFloat="true" layoutX="41.0" layoutY="317.0" prefHeight="27.0" prefWidth="193.0" promptText="Password" />
+      <Label alignment="CENTER" layoutX="278.0" layoutY="215.0" prefHeight="24.0" prefWidth="167.0" text="*** All Information Required! ***">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="signUpButton" layoutX="280.0" layoutY="270.0" onAction="#signUp" prefHeight="27.0" prefWidth="164.0" ripplerFill="#ffd0d0" style="-fx-background-color: #e7474d;" text="Sign Up" textFill="WHITE" />
+      <JFXButton fx:id="clearButton" layoutX="279.0" layoutY="315.0" onAction="#clear" prefHeight="27.0" prefWidth="164.0" ripplerFill="#f2c5c5" style="-fx-background-color: #e7474d;" text="Clear" textFill="WHITE" />
+      <Label fx:id="warningLabel" alignment="CENTER" layoutX="279.0" layoutY="238.0" prefHeight="24.0" prefWidth="167.0" textFill="#e7474d">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

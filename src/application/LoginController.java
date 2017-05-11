@@ -22,23 +22,27 @@ public class LoginController  {
 
 	@FXML
 	private JFXButton loginButton;
-	
+
 	@FXML
 	private JFXTextField userfNameText;
-	
+
 	@FXML
 	private JFXPasswordField passwordText;
-	
+
 	@FXML
 	private Label warningLabel;
-	
+
+	@FXML
+	private JFXButton signupButton;
+
 	@FXML
 	void login(ActionEvent event) throws IOException{
+		//change this if logic
 		if(userfNameText.getText().equals("admin")&&passwordText.getText().equals("1234")){
 			((Node) event.getSource()).getScene().getWindow().hide();
 			Stage primaryStage = new Stage();
 			Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/Main.fxml"));
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();		
@@ -48,18 +52,15 @@ public class LoginController  {
 		}
 	}
 
-//	public void login(ActionEvent event) throws IOException{
-//		if(userfNameText.getText().equals("admin")&&passwordText.getText().equals("1234")){
-//			((Node) event.getSource()).getScene().getWindow().hide();
-//			Stage primaryStage = new Stage();
-//			Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/Main.fxml"));
-//			Scene scene = new Scene(root,400,400);
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//			primaryStage.setScene(scene);
-//			primaryStage.show();		
-//		}	
-//		else {
-//			warningLabel.setText("Incorrect Username or Password!!!x");
-//		}
-//	}
+	@FXML
+	void signup(ActionEvent event) throws IOException {
+		Stage primaryStage = new Stage();
+		Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/Signup.fxml"));
+		Scene scene = new Scene(root);
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		primaryStage.setScene(scene);
+		primaryStage.show();		
+	}
+
+
 }

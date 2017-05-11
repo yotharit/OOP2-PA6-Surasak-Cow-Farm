@@ -11,18 +11,24 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
-      <JFXTextField fx:id="userfNameText" focusColor="#e7474d" layoutX="40.0" layoutY="253.0" prefHeight="25.0" prefWidth="220.0" promptText="USERNAME" />
-      <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="62.0" layoutY="346.0" onAction="#login" prefHeight="27.0" prefWidth="176.0" ripplerFill="#e7474d" style="-fx-background-color: #e7474d;" text="Login" />
-      <ImageView fx:id="loginAvatar" fitHeight="184.0" fitWidth="184.0" layoutX="58.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+      <JFXTextField fx:id="userfNameText" focusColor="#e7474d" layoutX="38.0" layoutY="250.0" prefHeight="25.0" prefWidth="220.0" promptText="USERNAME" />
+      <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="31.0" layoutY="348.0" onAction="#login" prefHeight="27.0" prefWidth="102.0" ripplerFill="#ffc3c6" style="-fx-background-color: #e7474d;" text="Login" textFill="WHITE" />
+      <ImageView fx:id="loginAvatar" fitHeight="144.0" fitWidth="137.0" layoutX="80.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/anonymous-user.png" />
+            <Image url="@../image/84850-cow-head.png" />
          </image>
       </ImageView>
-      <Label fx:id="warningLabel" alignment="CENTER" layoutX="40.0" layoutY="220.0" prefHeight="17.0" prefWidth="220.0" textAlignment="CENTER" textFill="#e7474d">
+      <Label fx:id="warningLabel" alignment="CENTER" layoutX="37.0" layoutY="226.0" prefHeight="17.0" prefWidth="220.0" textAlignment="CENTER" textFill="#e7474d">
          <font>
             <Font size="9.0" />
          </font>
       </Label>
-      <JFXPasswordField fx:id="passwordText" focusColor="#e7474d" layoutX="40.0" layoutY="291.0" onAction="#login" prefHeight="25.0" prefWidth="220.0" promptText="PASSWORD" />
+      <JFXPasswordField fx:id="passwordText" focusColor="#e7474d" layoutX="38.0" layoutY="291.0" onAction="#login" prefHeight="25.0" prefWidth="220.0" promptText="PASSWORD" />
+      <Label alignment="CENTER" layoutX="35.0" layoutY="192.0" prefHeight="17.0" prefWidth="220.0" text="SUKPRASERT FARM" textAlignment="CENTER">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="25.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="signupButton" buttonType="RAISED" layoutX="162.0" layoutY="348.0" onAction="#signup" prefHeight="27.0" prefWidth="102.0" ripplerFill="#ffc3c6" style="-fx-background-color: #e7474d;" text="Sign Up" textFill="WHITE" />
    </children>
 </AnchorPane>
