@@ -59,13 +59,13 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="8.0" layoutX="272.0" layoutY="328.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="897.0" />
       <Label layoutX="78.0" layoutY="370.0" text="1st Time" />
       <JFXDatePicker defaultColor="#e7474d" layoutX="139.0" layoutY="357.0" promptText="Select Vaccination Date" />
-      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="332.0" layoutY="361.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Specific Looks" />
+      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="332.0" layoutY="361.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Injected Vaccine" />
       <Label layoutX="78.0" layoutY="418.0" text="2nd Time" />
       <JFXDatePicker defaultColor="#e7474d" layoutX="140.0" layoutY="405.0" promptText="Select Vaccination Date" />
-      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="333.0" layoutY="409.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Specific Looks" />
+      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="333.0" layoutY="409.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Injected Vaccine" />
       <Label layoutX="79.0" layoutY="464.0" text="3rd Time" />
       <JFXDatePicker defaultColor="#e7474d" layoutX="140.0" layoutY="451.0" promptText="Select Vaccination Date" />
-      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="333.0" layoutY="455.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Specific Looks" />
+      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="333.0" layoutY="455.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Injected Vaccine" />
       <JFXButton buttonType="RAISED" layoutX="1093.0" layoutY="556.0" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="SAVE" textFill="WHITE" />
       <JFXButton fx:id="addcowButton" buttonType="RAISED" layoutX="1026.0" layoutY="556.0" onAction="#addCow" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="ADD" textFill="WHITE" />
    </children>

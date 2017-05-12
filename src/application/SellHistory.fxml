@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="625.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="89.0" layoutY="29.0" prefHeight="56.0" prefWidth="304.0" text="SELL SUMMARIZE">
+      <Label layoutX="89.0" layoutY="29.0" prefHeight="56.0" prefWidth="304.0" text="SELL HISTORY">
          <font>
             <Font name="Simplifica" size="40.0" />
          </font>
