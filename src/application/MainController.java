@@ -42,7 +42,6 @@ public class MainController implements Initializable{
 	@FXML
 	private StackPane stackPane;
 
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 

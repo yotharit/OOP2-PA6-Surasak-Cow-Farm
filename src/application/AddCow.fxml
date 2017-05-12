@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="340.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="340.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddCowController">
    <children>
       <Label layoutX="21.0" layoutY="26.0" prefHeight="36.0" prefWidth="78.0" text="ADD COW">
          <font>
@@ -17,22 +17,22 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="7.0" layoutX="103.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="319.0" />
-      <JFXDatePicker defaultColor="#e7474d" layoutX="143.0" layoutY="75.0" prefHeight="29.0" prefWidth="271.0" promptText="Imported Date" />
-      <JFXButton layoutX="40.0" layoutY="281.0" prefHeight="27.0" prefWidth="164.0" ripplerFill="#ffd0d0" style="-fx-background-color: #e7474d;" text="ADD" textFill="WHITE" />
-      <JFXButton layoutX="244.0" layoutY="280.0" prefHeight="27.0" prefWidth="164.0" ripplerFill="#f2c5c5" style="-fx-background-color: #e7474d;" text="Clear" textFill="WHITE" />
-      <Label alignment="CENTER" layoutX="32.0" layoutY="243.0" prefHeight="24.0" prefWidth="375.0" textFill="#e7474d">
+      <JFXDatePicker fx:id="importedDate" defaultColor="#e7474d" layoutX="143.0" layoutY="75.0" prefHeight="29.0" prefWidth="271.0" promptText="Imported Date" />
+      <JFXButton fx:id="addCowButton" layoutX="40.0" layoutY="281.0" prefHeight="27.0" prefWidth="164.0" ripplerFill="#ffd0d0" style="-fx-background-color: #e7474d;" text="ADD" textFill="WHITE" />
+      <JFXButton fx:id="claerButton" layoutX="244.0" layoutY="280.0" prefHeight="27.0" prefWidth="164.0" ripplerFill="#f2c5c5" style="-fx-background-color: #e7474d;" text="Clear" textFill="WHITE" />
+      <Label fx:id="warningAddCow" alignment="CENTER" layoutX="32.0" layoutY="243.0" prefHeight="24.0" prefWidth="375.0" textFill="#e7474d">
          <font>
             <Font size="8.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="32.0" layoutY="79.0" prefHeight="25.0" prefWidth="96.0" promptText="Insert Cow ID" />
-      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="32.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Enter Shed Number" />
-      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="170.0" layoutY="123.0" prefHeight="25.0" prefWidth="134.0" promptText="Enter Stall Number" />
-      <JFXTextField editable="false" focusColor="#e7474d" layoutX="317.0" layoutY="123.0" prefHeight="25.0" prefWidth="68.0" promptText="Enter Age" />
-      <JFXTextField focusColor="#e7474d" layoutX="131.0" layoutY="165.0" prefHeight="25.0" prefWidth="80.0" promptText="Enter Type" />
-      <JFXTextField focusColor="#e7474d" labelFloat="true" layoutX="33.0" layoutY="205.0" prefHeight="25.0" prefWidth="375.0" promptText="Enter Specific Looks" />
-      <JFXComboBox focusColor="#e7474d" layoutX="33.0" layoutY="163.0" prefHeight="27.0" prefWidth="89.0" promptText="Gender" />
-      <JFXTextField focusColor="#e7474d" layoutX="217.0" layoutY="165.0" prefHeight="25.0" prefWidth="80.0" promptText="Enter Height" />
-      <JFXTextField focusColor="#e7474d" layoutX="304.0" layoutY="165.0" prefHeight="25.0" prefWidth="80.0" promptText="Enter Weight" />
+      <JFXTextField fx:id="cowID" focusColor="#e7474d" labelFloat="true" layoutX="32.0" layoutY="79.0" prefHeight="25.0" prefWidth="96.0" promptText="Insert Cow ID" />
+      <JFXTextField fx:id="shedNumber" focusColor="#e7474d" labelFloat="true" layoutX="32.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Enter Shed Number" />
+      <JFXTextField fx:id="stallNumer" focusColor="#e7474d" labelFloat="true" layoutX="170.0" layoutY="123.0" prefHeight="25.0" prefWidth="134.0" promptText="Enter Stall Number" />
+      <JFXTextField fx:id="age" editable="false" focusColor="#e7474d" layoutX="317.0" layoutY="123.0" prefHeight="25.0" prefWidth="68.0" promptText="Enter Age" />
+      <JFXTextField fx:id="type" focusColor="#e7474d" layoutX="131.0" layoutY="165.0" prefHeight="25.0" prefWidth="80.0" promptText="Enter Type" />
+      <JFXTextField fx:id="specificLook" focusColor="#e7474d" labelFloat="true" layoutX="33.0" layoutY="205.0" prefHeight="25.0" prefWidth="375.0" promptText="Enter Specific Looks" />
+      <JFXComboBox fx:id="gender" focusColor="#e7474d" layoutX="33.0" layoutY="163.0" prefHeight="27.0" prefWidth="89.0" promptText="Gender" />
+      <JFXTextField fx:id="height" focusColor="#e7474d" layoutX="217.0" layoutY="165.0" prefHeight="25.0" prefWidth="80.0" promptText="Enter Height" />
+      <JFXTextField fx:id="weight" focusColor="#e7474d" layoutX="304.0" layoutY="165.0" prefHeight="25.0" prefWidth="80.0" promptText="Enter Weight" />
    </children>
 </AnchorPane>
