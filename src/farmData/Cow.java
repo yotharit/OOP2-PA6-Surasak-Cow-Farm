@@ -1,45 +1,40 @@
 package farmData;
 
-import java.time.LocalDate;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
+@DatabaseTable(tableName = "Cow")
 public class Cow {
-	private LocalDate importedDate;
-	private double importPrice;
-	private long serialNumber;
-	private int age;
-	private String sex;
-	private String colour;
-	private int height;
-	private int weight;
-	private String horn;
-	private String eyelash;
-	private String nose;
-	private String flaw;
-
-
-	public Cow(LocalDate importedDate, double importPrice, long serialNumber, 
-			int age, String sex, String colour,int height, int weight,
-			String horn, String eyelash, String nose, String flaw) 
-	{
-		this.importedDate = importedDate;
-		this.importPrice = importPrice;
-		this.serialNumber = serialNumber;
-		this.age = age;
-		this.sex = sex;
-		this.colour = colour;
-		this.height = height;
-		this.weight = weight;
-		this.horn = horn;
-		this.eyelash = eyelash;
-		this.nose = nose;
-		this.flaw = flaw;
-
-	}
 	
-	public LocalDate getImportedDate() {
+	@DatabaseField(id = true)
+	private long serialNumber;
+	@DatabaseField
+	private String importedDate;
+	@DatabaseField
+	private double importPrice;
+	@DatabaseField
+	private int age;
+	@DatabaseField
+	private String sex;
+	@DatabaseField
+	private String colour;
+	@DatabaseField
+	private int height;
+	@DatabaseField
+	private int weight;
+	@DatabaseField
+	private String horn;
+	@DatabaseField
+	private String eyelash;
+	@DatabaseField
+	private String nose;
+	@DatabaseField
+	private String flaw;
+	
+	public String getImportedDate() {
 		return importedDate;
 	}
-	public void setImportedDate(LocalDate importedDate) {
+	public void setImportedDate(String importedDate) {
 		this.importedDate = importedDate;
 	}
 	public double getImportPrice() {
