@@ -1,30 +1,136 @@
 package application;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
+import com.j256.ormlite.dao.Dao;
+import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.jdbc.JdbcConnectionSource;
+import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXTextField;
 
+import farmData.Cow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class CowManagerController {
-	
-    @FXML
-    private JFXButton addcowButton;
-    
-    @FXML
-    void addCow() throws IOException {
-    	Stage primaryStage = new Stage();
+
+	@FXML
+	private JFXTextField cowID;
+
+	@FXML
+	private JFXButton findButton;
+
+	@FXML
+	private JFXTextField importedDateField;
+
+	@FXML
+	private JFXTextField shedField;
+
+	@FXML
+	private JFXTextField stallField;
+
+	@FXML
+	private JFXTextField ageField;
+
+	@FXML
+	private JFXTextField genderField;
+
+	@FXML
+	private JFXTextField typeField;
+
+	@FXML
+	private JFXTextField specificLookField;
+
+	@FXML
+	private JFXTextField heightField;
+
+	@FXML
+	private JFXTextField weightField;
+
+	@FXML
+	private JFXDatePicker firstvaccineField;
+
+	@FXML
+	private JFXTextField firstvaccineInfoField;
+
+	@FXML
+	private JFXDatePicker secondvaccineField;
+
+	@FXML
+	private JFXTextField secondvaccineInfoField;
+
+	@FXML
+	private JFXDatePicker thirdvaccineField;
+
+	@FXML
+	private JFXTextField thirdvaccineInfoField;
+
+	@FXML
+	private JFXButton saveButton;
+
+	@FXML
+	private JFXButton addcowButton;
+
+	@FXML
+	private Label warningCowLabel;
+
+	@FXML
+	void addCow() throws IOException {
+		Stage primaryStage = new Stage();
 		Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/AddCow.fxml"));
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
+		primaryStage.setResizable(false);
 		primaryStage.show();		
-    }
-    
-    
-	
+	}
+
+	@FXML
+	void findCow() throws SQLException, IOException {
+		ConnectionSource connectionSource =
+				new JdbcConnectionSource("jdbc:mysql://35.189.162.227:3306/sukprasert","root","1234");
+		Dao<Cow, String> cowDao = DaoManager.createDao(connectionSource, Cow.class);
+		TableUtils.createTableIfNotExists(connectionSource, Cow.class);
+		if(cowDao.idExists(cowID.getText())){
+			Cow cow = cowDao.queryForId(cowID.getText());
+			importedDateField.setText(cow.getImportedDate());
+			stallField.setText(cow.getStall());
+			shedField.setText(cow.getShed());
+			ageField.setText(cow.getAge());
+			genderField.setText(cow.getSex());
+			typeField.setText(cow.getType());
+			specificLookField.setText(cow.getSpecificLook());
+			heightField.setText(cow.getHeight());
+			weightField.setText(cow.getWeight());
+			firstvaccineField.setPromptText(cow.getFirstvaccineDate());
+			firstvaccineInfoField.setText(cow.getFirstvaccineInfo());
+			secondvaccineField.setPromptText(cow.getSecondvaccineDate());
+			secondvaccineInfoField.setText(cow.getSecondvaccineInfo());
+			thirdvaccineField.setPromptText(cow.getThirdvaccineDate());
+			thirdvaccineInfoField.setText(cow.getThirdvaccineInfo());
+			connectionSource.close();
+		}
+		else if(cowID.getText().equals("")){
+			warningCowLabel.setText("Insert Cow ID!!!");
+			connectionSource.close();
+		}
+		else {
+			warningCowLabel.setText("Not Found Cow ID!!!");
+			connectionSource.close();
+		}
+	}
+
+	@FXML
+	void save() {
+
+	}
+
 }

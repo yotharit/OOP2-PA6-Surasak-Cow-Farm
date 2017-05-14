@@ -21,7 +21,7 @@ public class Account {
 	private String address;
 	@DatabaseField
 	private String phone;
-	
+		
 	
 	public Account() {
 		// ORMLite needs a no-arg constructor 
@@ -106,6 +106,7 @@ public class Account {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
 	
 	
 }
