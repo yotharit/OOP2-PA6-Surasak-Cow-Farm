@@ -95,6 +95,10 @@ public class CowManagerController {
 
 	@FXML
 	void findCow() throws SQLException, IOException {
+		
+		firstvaccineField.setValue(null);
+		secondvaccineField.setValue(null);
+		thirdvaccineField.setValue(null);
 		ConnectionSource connectionSource =
 				new JdbcConnectionSource("jdbc:mysql://35.189.162.227:3306/sukprasert","root","1234");
 		Dao<Cow, String> cowDao = DaoManager.createDao(connectionSource, Cow.class);
@@ -129,8 +133,33 @@ public class CowManagerController {
 	}
 
 	@FXML
-	void save() {
-
+	void save() throws SQLException, IOException {
+		ConnectionSource connectionSource =
+				new JdbcConnectionSource("jdbc:mysql://35.189.162.227:3306/sukprasert","root","1234");
+		Dao<Cow, String> cowDao = DaoManager.createDao(connectionSource, Cow.class);
+		TableUtils.createTableIfNotExists(connectionSource, Cow.class);
+		Cow cow = cowDao.queryForId(cowID.getText());
+		cow.setImportedDate(importedDateField.getText());
+		cow.setStall(stallField.getText());
+		cow.setShed(shedField.getText());
+		cow.setAge(ageField.getText());
+		cow.setSex(genderField.getText());
+		cow.setType(cow.getType());
+		cow.setSpecificLook(specificLookField.getText());
+		cow.setHeight(heightField.getText());
+		cow.setWeight(weightField.getText());
+		if(firstvaccineField.getValue()!=null)
+		cow.setFirstvaccineDate(firstvaccineField.getValue().toString());
+		cow.setFirstvaccineInfo(firstvaccineInfoField.getText());
+		if(secondvaccineField.getValue()!=null)
+		cow.setSecondvaccineDate(secondvaccineField.getValue().toString());
+		cow.setSecondvaccineInfo(secondvaccineInfoField.getText());
+		if(thirdvaccineField.getValue()!=null)
+		cow.setThirdvaccineDate(thirdvaccineField.getValue().toString());
+		cow.setThirdvaccineInfo(thirdvaccineInfoField.getText());
+		cowDao.update(cow);
+		System.out.println("UPDATED");
+		connectionSource.close();
 	}
 
 }

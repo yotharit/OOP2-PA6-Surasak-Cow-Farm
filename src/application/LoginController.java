@@ -13,6 +13,7 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import farmData.Account;
+import farmData.Setting;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -52,6 +53,18 @@ public class LoginController  {
 		if(accountDao.idExists(userfNameText.getText())){
 			Account account = accountDao.queryForId(userfNameText.getText());
 			if(account.getPassword().equals(passwordText.getText())){
+				Dao<Setting, String> settingDao = DaoManager.createDao(connectionSource, Setting.class);
+				TableUtils.createTableIfNotExists(connectionSource, Setting.class);
+				if(settingDao.idExists("default")){
+					Setting setting = settingDao.queryForId("default");
+					setting.setCurrentUser(userfNameText.getText());
+					settingDao.update(setting);
+				}
+				else {
+					Setting setting = new Setting();
+					setting.setCurrentUser(userfNameText.getText());
+					settingDao.create(setting);
+				}
 				((Node) event.getSource()).getScene().getWindow().hide();
 				Stage primaryStage = new Stage();
 				Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/Main.fxml"));

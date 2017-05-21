@@ -3,15 +3,17 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeView?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="625.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="625.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SellingManagementController">
    <children>
       <Label layoutX="89.0" layoutY="29.0" prefHeight="56.0" prefWidth="304.0" text="BUSINESS FUNCTION">
          <font>
@@ -23,28 +25,44 @@
             <Image url="@../image/money-dollar-circle-512.png" />
          </image>
       </ImageView>
-      <Label layoutX="38.0" layoutY="97.0" prefHeight="28.0" prefWidth="61.0" text="Bill No.">
+      <Label layoutX="38.0" layoutY="121.0" prefHeight="28.0" prefWidth="61.0" text="Bill No.">
          <font>
             <Font name="Cloud-Light" size="16.0" />
          </font>
       </Label>
-      <JFXTextField editable="false" focusColor="#e7474d" layoutX="100.0" layoutY="95.0" prefHeight="25.0" prefWidth="102.0" />
-      <JFXTextField focusColor="#e7474d" layoutX="38.0" layoutY="142.0" prefHeight="25.0" prefWidth="303.0" promptText="Buyer Name - Surname" />
-      <JFXDatePicker defaultColor="#e7474d" layoutX="38.0" layoutY="181.0" promptText="Seliing Date" />
-      <JFXTreeView layoutX="39.0" layoutY="235.0" prefHeight="301.0" prefWidth="1129.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="39.0" />
-      <JFXButton layoutX="965.0" layoutY="173.0" prefHeight="39.0" prefWidth="87.0" ripplerFill="#ffc3c6" style="-fx-background-color: #e7474d;" text="ADD" textFill="WHITE">
+      <JFXTextField fx:id="billIDfield" focusColor="#e7474d" labelFloat="true" layoutX="100.0" layoutY="119.0" prefHeight="25.0" prefWidth="132.0" promptText="Enter Bill Number" />
+      <JFXTextField fx:id="nameField" focusColor="#e7474d" labelFloat="true" layoutX="38.0" layoutY="166.0" prefHeight="25.0" prefWidth="303.0" promptText="Buyer Name - Surname" />
+      <JFXDatePicker fx:id="dateField" defaultColor="#e7474d" layoutX="38.0" layoutY="205.0" promptText="Seliing Date" />
+      <JFXButton fx:id="addButton" layoutX="967.0" layoutY="549.0" prefHeight="39.0" prefWidth="87.0" ripplerFill="#ffc3c6" style="-fx-background-color: #e7474d;" text="ADD" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </JFXButton>
-      <JFXComboBox focusColor="#e7474d" layoutX="867.0" layoutY="179.0" prefHeight="27.0" prefWidth="80.0" promptText="Product" />
-      <JFXTextField focusColor="#e7474d" layoutX="771.0" layoutY="181.0" prefHeight="25.0" prefWidth="88.0" promptText="Cow ID." />
-      <JFXTextField focusColor="#e7474d" layoutX="867.0" layoutY="142.0" prefHeight="25.0" prefWidth="80.0" promptText="Weight" visible="false" />
-      <JFXButton layoutX="1077.0" layoutY="173.0" prefHeight="40.0" prefWidth="89.0" ripplerFill="#ffbbbe" style="-fx-background-color: #e7474d;" text="REMOVE" textFill="WHITE">
+      <JFXComboBox fx:id="productCombo" focusColor="#e7474d" layoutX="869.0" layoutY="555.0" onAction="#onComboChanged" prefHeight="27.0" prefWidth="80.0" promptText="Product" />
+      <JFXTextField fx:id="addInfoField" focusColor="#e7474d" labelFloat="true" layoutX="753.0" layoutY="557.0" prefHeight="25.0" prefWidth="109.0" promptText="Cow ID. / Weight" />
+      <JFXButton fx:id="removeButton" layoutX="1079.0" layoutY="549.0" prefHeight="40.0" prefWidth="89.0" ripplerFill="#ffbbbe" style="-fx-background-color: #e7474d;" text="REMOVE" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1123.0" layoutY="566.0" ripplerFill="#ffc6c9" style="-fx-background-color: #e7474d;" text="SELL" textFill="WHITE" />
+      <JFXButton fx:id="sellButton" layoutX="294.0" layoutY="445.0" ripplerFill="#ffc6c9" style="-fx-background-color: #e7474d;" text="SELL" textFill="WHITE" />
+      <JFXTreeTableView fx:id="sellTable" layoutX="384.0" layoutY="97.0" prefHeight="429.0" prefWidth="793.0" AnchorPane.leftAnchor="384.0" AnchorPane.rightAnchor="43.0" />
+      <Label layoutX="49.0" layoutY="446.0" text="Sum" textFill="#e7474d">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="25.0" />
+         </font>
+      </Label>
+      <JFXTextArea focusColor="#e7474d" layoutX="96.0" layoutY="438.0" prefHeight="35.0" prefWidth="176.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="6.0" layoutX="50.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="69.0" />
+      <Label layoutX="126.0" layoutY="257.0" text="CURRENT PRICE" textFill="#e7474d">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="25.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="6.0" layoutX="255.0" layoutY="268.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="69.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="4.0" layoutX="44.0" layoutY="424.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="299.0" />
+      <JFXTextField fx:id="currentCowPriceField" editable="false" focusColor="#e7474d" labelFloat="true" layoutX="56.0" layoutY="308.0" prefHeight="25.0" prefWidth="263.0" promptText="Current Cow Price" />
+      <JFXTextField fx:id="currentFertilizerPriceField" editable="false" focusColor="#e7474d" labelFloat="true" layoutX="57.0" layoutY="358.0" prefHeight="25.0" prefWidth="263.0" promptText="Current Fertilizer Price" />
+      <Label fx:id="status" alignment="CENTER" layoutX="60.0" layoutY="474.0" prefHeight="17.0" prefWidth="268.0" textFill="#e7474d" />
    </children>
 </AnchorPane>

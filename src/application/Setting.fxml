@@ -6,9 +6,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="625.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="625.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingController">
    <children>
       <Label layoutX="89.0" layoutY="29.0" prefHeight="56.0" prefWidth="304.0" text="SETTINGS">
          <font>
@@ -20,18 +21,39 @@
             <Image url="@../image/settings-icon-16.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="1091.0" layoutY="541.0" ripplerFill="#f2b9b9" style="-fx-background-color: #e7474d;" text="SAVE" textFill="WHITE" />
-      <Label layoutX="65.0" layoutY="141.0" text="COW PRICE PER KGS :">
+      <JFXButton fx:id="saveButton" layoutX="1091.0" layoutY="566.0" onAction="#save" ripplerFill="#f2b9b9" style="-fx-background-color: #e7474d;" text="SAVE" textFill="WHITE" />
+      <Label layoutX="65.0" layoutY="437.0" text="COW PRICE PER KGS :">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="66.0" layoutY="189.0" text="FERTILIZER PRICE      :">
+      <Label layoutX="66.0" layoutY="485.0" text="FERTILIZER PRICE      :">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="289.0" layoutY="137.0" prefHeight="25.0" prefWidth="174.0" />
-      <JFXTextField layoutX="289.0" layoutY="183.0" prefHeight="25.0" prefWidth="174.0" />
+      <JFXTextField fx:id="cowField" layoutX="289.0" layoutY="433.0" prefHeight="25.0" prefWidth="174.0" />
+      <JFXTextField fx:id="ferField" layoutX="289.0" layoutY="479.0" prefHeight="25.0" prefWidth="174.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="5.0" layoutX="61.0" layoutY="542.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1090.0" AnchorPane.rightAnchor="69.0" />
+      <JFXTextField fx:id="addressField" focusColor="#e7474d" labelFloat="true" layoutX="62.0" layoutY="325.0" prefHeight="35.0" prefWidth="1063.0" promptText="Enter Address" />
+      <JFXTextField fx:id="phoneField" focusColor="#e7474d" labelFloat="true" layoutX="63.0" layoutY="386.0" prefHeight="27.0" prefWidth="193.0" promptText="Enter Phone Number" />
+      <JFXTextField fx:id="passwordField" focusColor="#e7474d" labelFloat="true" layoutX="267.0" layoutY="386.0" prefHeight="27.0" prefWidth="193.0" promptText="Password" />
+      <Label layoutX="62.0" layoutY="276.0" prefHeight="17.0" prefWidth="65.0" text="Setting">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="22.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="5.0" layoutX="129.0" layoutY="286.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1025.0" AnchorPane.rightAnchor="69.0" />
+      <Label layoutX="57.0" layoutY="111.0" prefHeight="26.0" prefWidth="142.0" text="User Information">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="22.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="4.0" layoutX="202.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="947.0" />
+      <JFXTextField fx:id="nameField" editable="false" focusColor="#e7474d" labelFloat="true" layoutX="65.0" layoutY="213.0" prefHeight="27.0" prefWidth="193.0" promptText="Name" />
+      <JFXTextField fx:id="surnameField" editable="false" focusColor="#e7474d" labelFloat="true" layoutX="274.0" layoutY="212.0" prefHeight="27.0" prefWidth="193.0" promptText="Surname" />
+      <JFXTextField fx:id="idField" focusColor="#e7474d" labelFloat="true" layoutX="482.0" layoutY="212.0" prefHeight="27.0" prefWidth="195.0" promptText="Personal ID" />
+      <JFXTextField fx:id="birthdayField" focusColor="#e7474d" labelFloat="true" layoutX="692.0" layoutY="212.0" prefHeight="27.0" prefWidth="195.0" promptText="Birthday" />
+      <JFXTextField fx:id="usernameField" editable="false" focusColor="#e7474d" labelFloat="true" layoutX="65.0" layoutY="163.0" prefHeight="27.0" prefWidth="328.0" promptText="Username" />
    </children>
 </AnchorPane>

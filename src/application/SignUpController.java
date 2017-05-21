@@ -63,6 +63,7 @@ public class SignUpController {
 		usernameField.clear();
 		passwordField.clear();
 		nameField.clear();
+		dateField.setValue(null);
 	}
 
 	@FXML

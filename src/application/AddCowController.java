@@ -71,7 +71,7 @@ public class AddCowController implements Initializable {
 
 		gender.getItems().add("Male");
 		gender.getItems().add("Female");
-		gender.setEditable(true);
+		gender.setEditable(false);
 		gender.setPromptText("Gender");
 
 	}

@@ -24,32 +24,24 @@
       </ImageView>
       <JFXTextField fx:id="cowID" focusColor="#e7474d" labelFloat="true" layoutX="57.0" layoutY="127.0" prefHeight="25.0" prefWidth="96.0" promptText="Insert Cow ID" />
       <JFXButton fx:id="findButton" buttonType="RAISED" layoutX="168.0" layoutY="125.0" onAction="#findCow" ripplerFill="#ffaaad" style="-fx-background-color: #e7474d;" text="FIND" textFill="WHITE" />
-      <JFXTextField fx:id="importedDateField" editable="false" focusColor="#e7474d" layoutX="155.0" layoutY="172.0" prefHeight="25.0" prefWidth="68.0" />
+      <JFXTextField fx:id="importedDateField" editable="false" focusColor="#e7474d" layoutX="155.0" layoutY="172.0" prefHeight="25.0" prefWidth="110.0" />
       <Label layoutX="57.0" layoutY="178.0" text="Imported Date" />
-      <JFXTextField fx:id="shedField" focusColor="#e7474d" labelFloat="true" layoutX="265.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" promptText="Enter No." />
-      <Label layoutX="227.0" layoutY="178.0" text="Shed" />
-      <JFXTextField fx:id="stallField" focusColor="#e7474d" labelFloat="true" layoutX="378.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" promptText="Enter No." />
-      <Label layoutX="342.0" layoutY="178.0" text="Stall" />
-      <JFXTextField fx:id="ageField" editable="false" focusColor="#e7474d" layoutX="485.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" />
-      <Label layoutX="452.0" layoutY="178.0" text="Age" />
-      <JFXTextField fx:id="genderField" editable="false" focusColor="#e7474d" layoutX="614.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" />
-      <Label layoutX="560.0" layoutY="177.0" text="Gender" />
-      <JFXTextField fx:id="typeField" editable="false" focusColor="#e7474d" layoutX="728.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" />
-      <Label layoutX="689.0" layoutY="177.0" text="Type" />
+      <JFXTextField fx:id="shedField" focusColor="#e7474d" labelFloat="true" layoutX="309.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" promptText="Enter No." />
+      <Label layoutX="271.0" layoutY="178.0" text="Shed" />
+      <JFXTextField fx:id="stallField" focusColor="#e7474d" labelFloat="true" layoutX="422.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" promptText="Enter No." />
+      <Label layoutX="386.0" layoutY="178.0" text="Stall" />
+      <JFXTextField fx:id="ageField" editable="false" focusColor="#e7474d" layoutX="529.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" />
+      <Label layoutX="496.0" layoutY="178.0" text="Age" />
+      <JFXTextField fx:id="genderField" editable="false" focusColor="#e7474d" layoutX="658.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" />
+      <Label layoutX="604.0" layoutY="177.0" text="Gender" />
+      <JFXTextField fx:id="typeField" editable="false" focusColor="#e7474d" layoutX="772.0" layoutY="171.0" prefHeight="25.0" prefWidth="68.0" />
+      <Label layoutX="733.0" layoutY="177.0" text="Type" />
       <JFXTextField fx:id="specificLookField" focusColor="#e7474d" labelFloat="true" layoutX="154.0" layoutY="223.0" prefHeight="25.0" prefWidth="998.0" promptText="Enter Specific Looks" />
       <Label layoutX="58.0" layoutY="229.0" text="Specific Look" />
-      <JFXTextField fx:id="heightField" focusColor="#e7474d" labelFloat="true" layoutX="105.0" layoutY="269.0" prefHeight="25.0" prefWidth="102.0" promptText="Input Number To Change">
-         <font>
-            <Font size="7.0" />
-         </font>
-      </JFXTextField>
+      <JFXTextField fx:id="heightField" focusColor="#e7474d" labelFloat="true" layoutX="105.0" layoutY="269.0" prefHeight="25.0" prefWidth="163.0" promptText="Input Number To Change" />
       <Label layoutX="59.0" layoutY="276.0" text="Height" />
-      <JFXTextField fx:id="weightField" focusColor="#e7474d" labelFloat="true" layoutX="262.0" layoutY="269.0" prefHeight="25.0" prefWidth="102.0" promptText="Input Number To Change">
-         <font>
-            <Font size="7.0" />
-         </font>
-      </JFXTextField>
-      <Label layoutX="209.0" layoutY="276.0" text="Weight" />
+      <JFXTextField fx:id="weightField" focusColor="#e7474d" labelFloat="true" layoutX="332.0" layoutY="269.0" prefHeight="25.0" prefWidth="163.0" promptText="Input Number To Change" />
+      <Label layoutX="279.0" layoutY="276.0" text="Weight" />
       <Label layoutX="61.0" layoutY="319.0" text="Vaccination Information">
          <font>
             <Font size="18.0" />
@@ -66,7 +58,7 @@
       <Label layoutX="79.0" layoutY="464.0" text="3rd Time" />
       <JFXDatePicker fx:id="thirdvaccineField" defaultColor="#e7474d" layoutX="140.0" layoutY="451.0" promptText="Select Vaccination Date" />
       <JFXTextField fx:id="thirdvaccineInfoField" focusColor="#e7474d" labelFloat="true" layoutX="333.0" layoutY="455.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Injected Vaccine" />
-      <JFXButton fx:id="saveButton" buttonType="RAISED" layoutX="1093.0" layoutY="556.0" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="SAVE" textFill="WHITE" />
+      <JFXButton fx:id="saveButton" buttonType="RAISED" layoutX="1093.0" layoutY="556.0" onAction="#save" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="SAVE" textFill="WHITE" />
       <JFXButton fx:id="addcowButton" buttonType="RAISED" layoutX="1026.0" layoutY="556.0" onAction="#addCow" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="ADD" textFill="WHITE" />
       <Label fx:id="warningCowLabel" alignment="CENTER_RIGHT" layoutX="953.0" layoutY="510.0" prefHeight="17.0" prefWidth="201.0" textFill="#e7474d" />
    </children>

@@ -11,6 +11,7 @@ import com.jfoenix.controls.JFXRippler;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 
+import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +28,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class MainController implements Initializable{
 
@@ -65,10 +67,8 @@ public class MainController implements Initializable{
 			cowPane.setVisible(false);
 			historyPane.setVisible(false);
 
-
 			stackPane.setVisible(true);
 			stackPane.toFront();
-
 
 			//Set Up Drawer to be anchor pane
 			AnchorPane drawerPane = FXMLLoader.load(ClassLoader.getSystemResource("application/Drawer.fxml"));
@@ -104,35 +104,35 @@ public class MainController implements Initializable{
 						switch (node.getAccessibleText()) {
 						case "businessMenu":
 							businessPane.setVisible(true);
-							businessPane.toFront();;
+							businessPane.toFront();
 							transition.setRate(transition.getRate()*(-1));
 							transition.play();
 							drawer.close();
 							break;
 						case "cowMenu":
 							cowPane.setVisible(true);
-							cowPane.toFront();;
+							cowPane.toFront();
 							transition.setRate(transition.getRate()*(-1));
 							transition.play();
 							drawer.close();
 							break;
 						case "sellMenu":
 							historyPane.setVisible(true);
-							historyPane.toFront();;
+							historyPane.toFront();
 							transition.setRate(transition.getRate()*(-1));
 							transition.play();
 							drawer.close();
 							break;
 						case "setMenu":
 							settingPane.setVisible(true);
-							settingPane.toFront();;
+							settingPane.toFront();
 							transition.setRate(transition.getRate()*(-1));
 							transition.play();
 							drawer.close();
 							break;
 						case "sumMenu":
 							sellingSumPane.setVisible(true);
-							sellingSumPane.toFront();;
+							sellingSumPane.toFront();
 							transition.setRate(transition.getRate()*(-1));
 							transition.play();
 							drawer.close();
