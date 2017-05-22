@@ -3,7 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.control.Label?>
@@ -52,7 +51,6 @@
             <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="25.0" />
          </font>
       </Label>
-      <JFXTextArea focusColor="#e7474d" layoutX="96.0" layoutY="438.0" prefHeight="35.0" prefWidth="176.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="6.0" layoutX="50.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="69.0" />
       <Label layoutX="126.0" layoutY="257.0" text="CURRENT PRICE" textFill="#e7474d">
          <font>
@@ -63,6 +61,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="4.0" layoutX="44.0" layoutY="424.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="299.0" />
       <JFXTextField fx:id="currentCowPriceField" editable="false" focusColor="#e7474d" labelFloat="true" layoutX="56.0" layoutY="308.0" prefHeight="25.0" prefWidth="263.0" promptText="Current Cow Price" />
       <JFXTextField fx:id="currentFertilizerPriceField" editable="false" focusColor="#e7474d" labelFloat="true" layoutX="57.0" layoutY="358.0" prefHeight="25.0" prefWidth="263.0" promptText="Current Fertilizer Price" />
-      <Label fx:id="status" alignment="CENTER" layoutX="60.0" layoutY="474.0" prefHeight="17.0" prefWidth="268.0" textFill="#e7474d" />
+      <Label fx:id="status" alignment="CENTER" layoutX="60.0" layoutY="497.0" prefHeight="17.0" prefWidth="268.0" textFill="#e7474d" />
+      <JFXTextField fx:id="sumField" alignment="CENTER" editable="false" focusColor="#e7474d" layoutX="94.0" layoutY="445.0" prefHeight="29.0" prefWidth="189.0" />
    </children>
 </AnchorPane>
