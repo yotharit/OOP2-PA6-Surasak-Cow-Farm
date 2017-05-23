@@ -58,8 +58,9 @@
       <Label layoutX="79.0" layoutY="464.0" text="3rd Time" />
       <JFXDatePicker fx:id="thirdvaccineField" defaultColor="#e7474d" layoutX="140.0" layoutY="451.0" promptText="Select Vaccination Date" />
       <JFXTextField fx:id="thirdvaccineInfoField" focusColor="#e7474d" labelFloat="true" layoutX="333.0" layoutY="455.0" prefHeight="25.0" prefWidth="816.0" promptText="Enter Injected Vaccine" />
-      <JFXButton fx:id="saveButton" buttonType="RAISED" layoutX="1093.0" layoutY="556.0" onAction="#save" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="SAVE" textFill="WHITE" />
-      <JFXButton fx:id="addcowButton" buttonType="RAISED" layoutX="1026.0" layoutY="556.0" onAction="#addCow" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="ADD" textFill="WHITE" />
+      <JFXButton fx:id="removeButton" buttonType="RAISED" layoutX="1025.0" layoutY="556.0" onAction="#remove" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="REMOVE" textFill="WHITE" />
+      <JFXButton fx:id="addcowButton" buttonType="RAISED" layoutX="968.0" layoutY="556.0" onAction="#addCow" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="ADD" textFill="WHITE" />
       <Label fx:id="warningCowLabel" alignment="CENTER_RIGHT" layoutX="953.0" layoutY="510.0" prefHeight="17.0" prefWidth="201.0" textFill="#e7474d" />
+      <JFXButton fx:id="saveButton" buttonType="RAISED" layoutX="1109.0" layoutY="556.0" onAction="#save" ripplerFill="#ffc5c5" style="-fx-background-color: #e7474d;;" text="SAVE" textFill="WHITE" />
    </children>
 </AnchorPane>

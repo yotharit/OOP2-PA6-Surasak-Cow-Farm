@@ -80,6 +80,9 @@ public class CowManagerController {
 	private JFXButton addcowButton;
 
 	@FXML
+	private JFXButton removeButton;
+	
+	@FXML
 	private Label warningCowLabel;
 
 	@FXML
@@ -95,7 +98,7 @@ public class CowManagerController {
 
 	@FXML
 	void findCow() throws SQLException, IOException {
-		
+		warningCowLabel.setText("");
 		firstvaccineField.setValue(null);
 		secondvaccineField.setValue(null);
 		thirdvaccineField.setValue(null);
@@ -158,8 +161,18 @@ public class CowManagerController {
 		cow.setThirdvaccineDate(thirdvaccineField.getValue().toString());
 		cow.setThirdvaccineInfo(thirdvaccineInfoField.getText());
 		cowDao.update(cow);
-		System.out.println("UPDATED");
 		connectionSource.close();
 	}
 
+	@FXML
+	void remove() throws SQLException, IOException {
+		ConnectionSource connectionSource =
+				new JdbcConnectionSource("jdbc:mysql://35.189.162.227:3306/sukprasert","root","1234");
+		Dao<Cow, String> cowDao = DaoManager.createDao(connectionSource, Cow.class);
+		TableUtils.createTableIfNotExists(connectionSource, Cow.class);
+		Cow cow = cowDao.queryForId(cowID.getText());
+		cowDao.delete(cow);
+		connectionSource.close();
+		warningCowLabel.setText("");
+	}
 }

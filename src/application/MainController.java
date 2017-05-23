@@ -95,11 +95,13 @@ public class MainController implements Initializable{
 			for(Node node : drawerPane.getChildren()){
 				if(node.getAccessibleText() != null) {
 					node.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
+												
 						businessPane.setVisible(false);
 						sellingSumPane.setVisible(false);
 						settingPane.setVisible(false);
 						cowPane.setVisible(false);
 						historyPane.setVisible(false);
+				
 						drawer.toBack();
 						switch (node.getAccessibleText()) {
 						case "businessMenu":

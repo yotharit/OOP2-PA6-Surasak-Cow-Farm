@@ -5,7 +5,7 @@ import com.j256.ormlite.table.DatabaseTable;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 
 @DatabaseTable(tableName = "Bill")
-public class Bill{
+public class Bill {
 
 	@DatabaseField(id = true)
 	private String billnumer;

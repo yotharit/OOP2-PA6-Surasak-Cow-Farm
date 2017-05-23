@@ -9,6 +9,7 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
@@ -182,21 +183,20 @@ public class SellingManagementController implements Initializable {
 							Setting setting = settingDao.queryForId("default");
 							double cal = Double.parseDouble(cow.getWeight()) * setting.getCowPrice();
 							sellTable.getRoot().getChildren()
-									.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "",
-											productCombo.getValue(), addInfoField.getText(), "Cow : Serial-Number:"
-													+ addInfoField.getText() + " " + cow.getWeight() + " Kg.",
+							.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "",
+									productCombo.getValue(), addInfoField.getText(), "Cow : Serial-Number:"
+											+ addInfoField.getText() + " " + cow.getWeight() + " Kg.",
 											cal + "")));
 							connectionSource.close();
 							int x = sellTable.getRoot().getChildren().size();
 							double sum = 0;
-							for(int j = 0; j<x; j++){
+							for (int j = 0; j < x; j++) {
 								double added = Double.parseDouble(
-										sellTable.getRoot().getChildren().get(j).getValue().getPrice().getValue());
-								sum+=added;
-								sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j+1)+"");
+										sellTable.getRoot().getChildren().get(j).getValue().getPrice());
+								sum += added;
+								sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j + 1) + "");
 							}
-							sumField.setText(sum+"");
-
+							sumField.setText(sum + "");
 
 						} else {
 							connectionSource.close();
@@ -215,19 +215,19 @@ public class SellingManagementController implements Initializable {
 						double cal = Double.parseDouble(addInfoField.getText()) * setting.getFertilizerPrize();
 						currentRowNumber = sellTable.getRoot().getChildren().size();
 						sellTable.getRoot().getChildren()
-								.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "", productCombo.getValue(),
-										addInfoField.getText(), "Fertilizer : Weight " + addInfoField.getText() + "Kg.",
-										cal + "")));
+						.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "", productCombo.getValue(),
+								addInfoField.getText(), "Fertilizer : Weight " + addInfoField.getText() + "Kg.",
+								cal + "")));
 						connectionSource.close();
 						int x = sellTable.getRoot().getChildren().size();
 						double sum = 0;
-						for(int j = 0; j<x; j++){
+						for (int j = 0; j < x; j++) {
 							double added = Double.parseDouble(
-									sellTable.getRoot().getChildren().get(j).getValue().getPrice().getValue());
-							sum+=added;
-							sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j+1)+"");
+									sellTable.getRoot().getChildren().get(j).getValue().getPrice());
+							sum += added;
+							sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j + 1) + "");
 						}
-						sumField.setText(sum+"");
+						sumField.setText(sum + "");
 
 					} catch (SQLException | IOException e1) {
 						// TODO Auto-generated catch block
@@ -242,13 +242,61 @@ public class SellingManagementController implements Initializable {
 			sellTable.getRoot().getChildren().remove(i);
 			int x = sellTable.getRoot().getChildren().size();
 			double sum = 0;
-			for(int j = 0; j<x; j++){
-				double added = Double.parseDouble(
-						sellTable.getRoot().getChildren().get(j).getValue().getPrice().getValue());
-				sum+=added;
-				sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j+1)+"");
+			for (int j = 0; j < x; j++) {
+				double added = Double
+						.parseDouble(sellTable.getRoot().getChildren().get(j).getValue().getPrice());
+				sum += added;
+				sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j + 1) + "");
 			}
-			sumField.setText(sum+"");
+			sumField.setText(sum + "");
+		});
+
+		sellButton.addEventHandler(MouseEvent.MOUSE_CLICKED, eventHandler -> {
+			if (sellTable.getRoot().getChildren().size() == 0 || billIDfield.getText().isEmpty()
+					|| nameField.getText().isEmpty() || dateField.getValue().toString().isEmpty()
+					|| billIDfield.getText().isEmpty()) {
+				status.setText("Fill All Information!!!");
+			} else {
+				try {
+					ConnectionSource connectionSource = new JdbcConnectionSource(
+							"jdbc:mysql://35.189.162.227:3306/sukprasert", "root", "1234");
+					Dao<Cow, String> cowDao = DaoManager.createDao(connectionSource, Cow.class);
+					Dao<Bill, String> billDao = DaoManager.createDao(connectionSource, Bill.class);
+					TableUtils.createTableIfNotExists(connectionSource, Bill.class);
+					String information = "";
+					int k = sellTable.getRoot().getChildren().size();
+					for(int i = 0; i<k;i++){
+						String Type = sellTable.getRoot().getChildren().get(i).getValue().getItemType().charAt(0) +"";
+						String Info = sellTable.getRoot().getChildren().get(i).getValue().getId();
+						if(i == k-1){
+							information = information + Type + Info;
+						}
+						else{
+						information = information + Type + Info + ",";
+						}
+						if(Type.equals("C")){
+							cowDao.deleteById(Info);
+						}
+					}
+					Bill bill = new Bill();
+					bill.setBillnumer(billIDfield.getText());
+					bill.setBuyer(nameField.getText());
+					bill.setDate(dateField.getValue().toString());
+					bill.setSellInfomation(information);
+					if(billDao.idExists(billIDfield.getText())){
+						status.setText("Bill ID Exist!!!!");
+						connectionSource.close();
+					}
+					else {
+						billDao.create(bill);
+						connectionSource.close();
+					}
+				} catch (SQLException | IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+
+			}
 		});
 	}
 
@@ -275,40 +323,42 @@ class BillRow extends RecursiveTreeObject<BillRow> {
 		this.price = new SimpleStringProperty(price);
 	}
 
-	public StringProperty getPrice() {
-		return price;
+	public String getPrice() {
+		return price.getValue();
 	}
 
 	public void setPrice(String price) {
-		this.price.setValue(price);;
+		this.price.setValue(price);
+		;
 	}
 
-	public StringProperty getDescription() {
-		return description;
+	public String getDescription() {
+		return description.getValue();
 	}
 
 	public void setDescription(String description) {
-		this.description.setValue(description);;
+		this.description.setValue(description);
+		;
 	}
 
-	public StringProperty getRowNo() {
-		return rowNo;
+	public String getRowNo() {
+		return rowNo.getValue();
 	}
 
 	public void setRowNo(String rowNo) {
 		this.rowNo.set(rowNo);
 	}
 
-	public StringProperty getItemType() {
-		return itemType;
+	public String getItemType() {
+		return itemType.getValue();
 	}
 
 	public void setItemType(String itemType) {
 		this.itemType.setValue(itemType);
 	}
 
-	public StringProperty getId() {
-		return id;
+	public String getId() {
+		return id.getValue();
 	}
 
 	public void setId(String id) {
