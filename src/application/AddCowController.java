@@ -124,6 +124,4 @@ public class AddCowController implements Initializable {
 			connectionSource.close();
 		}
 	}
-
-
 }

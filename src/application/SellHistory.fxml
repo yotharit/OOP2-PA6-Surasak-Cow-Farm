@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.control.Label?>
@@ -23,9 +22,8 @@
          </image>
       </ImageView>
       <JFXTreeTableView fx:id="sellTable" layoutX="40.0" layoutY="164.0" prefHeight="429.0" prefWidth="1140.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
-      <JFXTextField fx:id="nameField" focusColor="#e7474d" labelFloat="true" layoutX="177.0" layoutY="117.0" prefHeight="25.0" prefWidth="209.0" promptText="Buyer Name" />
-      <JFXComboBox fx:id="productCombo" focusColor="#e7474d" labelFloat="true" layoutX="399.0" layoutY="115.0" onAction="#onComboChanged" prefHeight="27.0" prefWidth="84.0" promptText="Product" />
-      <JFXDatePicker fx:id="dateField" defaultColor="#e7474d" layoutX="499.0" layoutY="113.0" />
       <JFXTextField fx:id="billIDField" focusColor="#e7474d" labelFloat="true" layoutX="40.0" layoutY="117.0" prefHeight="25.0" prefWidth="126.0" promptText="Bill Number" />
+      <JFXButton fx:id="findButton" layoutX="179.0" layoutY="116.0" ripplerFill="#ffb5b5" style="-fx-background-color: #e7474d;" text="Find" textFill="WHITE" />
+      <JFXButton fx:id="refreshButton" layoutX="237.0" layoutY="116.0" ripplerFill="#ffb5b5" style="-fx-background-color: #e7474d;" text="Refresh" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -183,16 +183,16 @@ public class SellingManagementController implements Initializable {
 							Setting setting = settingDao.queryForId("default");
 							double cal = Double.parseDouble(cow.getWeight()) * setting.getCowPrice();
 							sellTable.getRoot().getChildren()
-							.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "",
-									productCombo.getValue(), addInfoField.getText(), "Cow : Serial-Number:"
-											+ addInfoField.getText() + " " + cow.getWeight() + " Kg.",
+									.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "",
+											productCombo.getValue(), addInfoField.getText(), "Cow : Serial-Number:"
+													+ addInfoField.getText() + " " + cow.getWeight() + " Kg.",
 											cal + "")));
 							connectionSource.close();
 							int x = sellTable.getRoot().getChildren().size();
 							double sum = 0;
 							for (int j = 0; j < x; j++) {
-								double added = Double.parseDouble(
-										sellTable.getRoot().getChildren().get(j).getValue().getPrice());
+								double added = Double
+										.parseDouble(sellTable.getRoot().getChildren().get(j).getValue().getPrice());
 								sum += added;
 								sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j + 1) + "");
 							}
@@ -215,15 +215,15 @@ public class SellingManagementController implements Initializable {
 						double cal = Double.parseDouble(addInfoField.getText()) * setting.getFertilizerPrize();
 						currentRowNumber = sellTable.getRoot().getChildren().size();
 						sellTable.getRoot().getChildren()
-						.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "", productCombo.getValue(),
-								addInfoField.getText(), "Fertilizer : Weight " + addInfoField.getText() + "Kg.",
-								cal + "")));
+								.add(new TreeItem<BillRow>(new BillRow(currentRowNumber + "", productCombo.getValue(),
+										addInfoField.getText(), "Fertilizer : Weight " + addInfoField.getText() + "Kg.",
+										cal + "")));
 						connectionSource.close();
 						int x = sellTable.getRoot().getChildren().size();
 						double sum = 0;
 						for (int j = 0; j < x; j++) {
-							double added = Double.parseDouble(
-									sellTable.getRoot().getChildren().get(j).getValue().getPrice());
+							double added = Double
+									.parseDouble(sellTable.getRoot().getChildren().get(j).getValue().getPrice());
 							sum += added;
 							sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j + 1) + "");
 						}
@@ -243,8 +243,7 @@ public class SellingManagementController implements Initializable {
 			int x = sellTable.getRoot().getChildren().size();
 			double sum = 0;
 			for (int j = 0; j < x; j++) {
-				double added = Double
-						.parseDouble(sellTable.getRoot().getChildren().get(j).getValue().getPrice());
+				double added = Double.parseDouble(sellTable.getRoot().getChildren().get(j).getValue().getPrice());
 				sum += added;
 				sellTable.getRoot().getChildren().get(j).getValue().setRowNo((j + 1) + "");
 			}
@@ -265,16 +264,22 @@ public class SellingManagementController implements Initializable {
 					TableUtils.createTableIfNotExists(connectionSource, Bill.class);
 					String information = "";
 					int k = sellTable.getRoot().getChildren().size();
-					for(int i = 0; i<k;i++){
-						String Type = sellTable.getRoot().getChildren().get(i).getValue().getItemType().charAt(0) +"";
+					for (int i = 0; i < k; i++) {
+						String Type = sellTable.getRoot().getChildren().get(i).getValue().getItemType().charAt(0) + "";
 						String Info = sellTable.getRoot().getChildren().get(i).getValue().getId();
-						if(i == k-1){
-							information = information + Type + Info;
-						}
-						else{
-						information = information + Type + Info + ",";
-						}
-						if(Type.equals("C")){
+						if (i == k - 1) {
+							if (Type.equals("F")) {
+								information = information + Type + Info;
+							} else {
+								information = information + Type + Info + "-" + cowDao.queryForId(Info).getWeight();
+							}
+						} else {
+							if (Type.equals("F")) {
+								information = information + Type + Info + ",";
+							} else {
+								information = information + Type + Info + "-" + cowDao.queryForId(Info).getWeight() + ",";
+							}						}
+						if (Type.equals("C")) {
 							cowDao.deleteById(Info);
 						}
 					}
@@ -283,19 +288,26 @@ public class SellingManagementController implements Initializable {
 					bill.setBuyer(nameField.getText());
 					bill.setDate(dateField.getValue().toString());
 					bill.setSellInfomation(information);
-					if(billDao.idExists(billIDfield.getText())){
+					bill.setSumPrice(sumField.getText());
+					if (billDao.idExists(billIDfield.getText())) {
 						status.setText("Bill ID Exist!!!!");
 						connectionSource.close();
-					}
-					else {
+					} else {
 						billDao.create(bill);
 						connectionSource.close();
 					}
+					
 				} catch (SQLException | IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-
+				sellTable.getRoot().getChildren().clear();
+				billIDfield.clear();
+				sumField.clear();
+				nameField.clear();
+				dateField.setValue(null);
+				addInfoField.clear();
+				productCombo.setValue(null);
 			}
 		});
 	}

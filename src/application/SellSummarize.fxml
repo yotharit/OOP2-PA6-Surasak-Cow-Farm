@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="625.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="625.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SellSummarizeController">
    <children>
       <Label layoutX="89.0" layoutY="29.0" prefHeight="56.0" prefWidth="304.0" text="SELL SUMMARIZE">
          <font>
@@ -19,6 +22,17 @@
             <Image url="@../image/13-512.png" />
          </image>
       </ImageView>
-      <JFXTreeTableView layoutX="37.0" layoutY="115.0" prefHeight="482.0" prefWidth="1132.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+      <Label layoutX="47.0" layoutY="113.0" text="BUSINESS INFORMATION">
+         <font>
+            <Font name="Besom by Krisjanis Mezulis / RIT CREATIVE " size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7474d" height="5.0" layoutX="242.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="913.0" />
+      <JFXTextField fx:id="sellingCountField" focusColor="#e7474d" labelFloat="true" layoutX="53.0" layoutY="161.0" promptText="Selling Count" />
+      <JFXTextField fx:id="totalIncomeField" focusColor="#e7474d" labelFloat="true" layoutX="226.0" layoutY="161.0" promptText="Total Income" />
+      <JFXTextField fx:id="totalAssetField" focusColor="#e7474d" labelFloat="true" layoutX="54.0" layoutY="207.0" prefHeight="25.0" prefWidth="325.0" promptText="Total Asset - Calculated From Cow" />
+      <JFXTextField fx:id="buyingCostField" focusColor="#e7474d" labelFloat="true" layoutX="54.0" layoutY="256.0" prefHeight="25.0" prefWidth="325.0" promptText="Buying Cost - Calculated From Current Owning Cow" />
+      <JFXTreeView fx:id="farmView" layoutX="423.0" layoutY="157.0" prefHeight="434.0" prefWidth="729.0" />
+      <JFXButton fx:id="refreshButton" layoutX="302.0" layoutY="300.0" ripplerFill="#ffbcbf" style="-fx-background-color: #e7474d;" text="REFRESH" textFill="WHITE" />
    </children>
 </AnchorPane>

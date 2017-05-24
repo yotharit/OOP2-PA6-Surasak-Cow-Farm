@@ -15,7 +15,19 @@ public class Bill {
 	private String date;
 	@DatabaseField
 	private String sellInfomation;
+	@DatabaseField
+	private String sumPrice;
 	
+	
+
+	public String getSumPrice() {
+		return sumPrice;
+	}
+
+	public void setSumPrice(String sumPrice) {
+		this.sumPrice = sumPrice;
+	}
+
 	public String getBillnumer() {
 		return billnumer;
 	}
