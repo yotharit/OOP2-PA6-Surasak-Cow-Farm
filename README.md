@@ -1,6 +1,6 @@
 # OOP2-PA6-Surasak-Cow-Farm
 
- **To See the Application Doc. go to doc folder
+ **To See the Application Doc. go to doc folder - https://github.com/yotharit/OOP2-PA6-Surasak-Cow-Farm/blob/master/doc/Sukprasert’s%20Farm%20Application%20DOCS.pdf
  
 https://yotharit.github.io/OOP2-PA6-Surasak-Cow-Farm/ - GitHub Pages
 
