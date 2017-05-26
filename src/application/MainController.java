@@ -16,9 +16,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
-
+/**
+ * Controller for Main.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class MainController implements Initializable{
 
+	//FXML Attributes
 	@FXML
 	private AnchorPane anchorPlane;
 
@@ -31,6 +36,9 @@ public class MainController implements Initializable{
 	@FXML
 	private StackPane stackPane;
 
+	/**
+	 * Run when FXML File loaded controller how ui should operate
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 

@@ -18,6 +18,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
+/**
+ * Controller for Setting.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class SettingController implements Initializable {
 
 	@FXML
@@ -53,6 +58,9 @@ public class SettingController implements Initializable {
 	@FXML
 	private JFXTextField usernameField;
 
+	/**
+	 * run when fxml Loaded
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
@@ -84,6 +92,12 @@ public class SettingController implements Initializable {
 		}
 	}
 
+	/**
+	 * Action when saveButton clicked
+	 * @param event
+	 * @throws SQLException
+	 * @throws IOException
+	 */
 	@FXML
 	void save(ActionEvent event) throws SQLException, IOException{
 		ConnectionSource connectionSource = new JdbcConnectionSource("jdbc:mysql://35.189.162.227:3306/sukprasert",

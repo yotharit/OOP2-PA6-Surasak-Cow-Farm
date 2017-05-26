@@ -32,8 +32,14 @@ import javafx.scene.control.TreeTableColumn.CellDataFeatures;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 
+/**
+ * Controller class for SellHistory.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class SellHistoryController implements Initializable {
 
+	//FXML Attributes
 	@FXML
 	private JFXTreeTableView<HistoryRow> sellTable;
 
@@ -46,9 +52,13 @@ public class SellHistoryController implements Initializable {
     @FXML
     private JFXButton refreshButton;
 
+    /**
+     * Run when FXML loaded
+     */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
+		//Create Tree Table Column
 		JFXTreeTableColumn<HistoryRow, String> billNum = new JFXTreeTableColumn<>("Bill Number");
 		billNum.setCellValueFactory(
 				new Callback<TreeTableColumn.CellDataFeatures<HistoryRow, String>, ObservableValue<String>>() {
@@ -102,6 +112,7 @@ public class SellHistoryController implements Initializable {
 		});
 		price.setPrefWidth(180);
 
+		//Add Column to Table
 		ObservableList<HistoryRow> historyRow = FXCollections.observableArrayList();
 		TreeItem<HistoryRow> root = new RecursiveTreeItem<>(historyRow, RecursiveTreeObject::getChildren);
 		sellTable.getColumns().setAll(billNum, buyerName, date, info,price);
@@ -123,6 +134,7 @@ public class SellHistoryController implements Initializable {
 			e.printStackTrace();
 		}
 		
+		//add action to refreshButton
 		refreshButton.addEventHandler(MouseEvent.MOUSE_CLICKED, eventHandler ->{
 			try {
 				sellTable.getRoot().getChildren().clear();
@@ -142,6 +154,7 @@ public class SellHistoryController implements Initializable {
 			}
 		});
 		
+		//Find Button action
 		findButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 			try {
 				sellTable.getRoot().getChildren().clear();
@@ -173,6 +186,11 @@ public class SellHistoryController implements Initializable {
 
 }
 
+/**
+ * Class for HistoryRow keep Row information
+ * @author Tharit Pongsaneh
+ *
+ */
 class HistoryRow extends RecursiveTreeObject<HistoryRow> {
 
 	StringProperty billNumber;

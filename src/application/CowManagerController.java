@@ -20,8 +20,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+/**
+ * CowManagerController is a controller for CowManager.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class CowManagerController {
 
+	//FXML Attributes
 	@FXML
 	private JFXTextField cowID;
 
@@ -88,6 +94,10 @@ public class CowManagerController {
 	@FXML
     private JFXButton showButton;
 
+	/**
+	 * Open AddCow.fxml when button clicked
+	 * @throws IOException
+	 */
 	@FXML
 	void addCow() throws IOException {
 		Stage primaryStage = new Stage();
@@ -99,6 +109,11 @@ public class CowManagerController {
 		primaryStage.show();		
 	}
 
+	/**
+	 * Find cow information from database when find button clicked
+	 * @throws SQLException
+	 * @throws IOException
+	 */
 	@FXML
 	void findCow() throws SQLException, IOException {
 		warningCowLabel.setText("");
@@ -138,6 +153,11 @@ public class CowManagerController {
 		}
 	}
 
+	/**
+	 * Save Changed information to Database when save button clicked
+	 * @throws SQLException
+	 * @throws IOException
+	 */
 	@FXML
 	void save() throws SQLException, IOException {
 		ConnectionSource connectionSource =
@@ -167,6 +187,11 @@ public class CowManagerController {
 		connectionSource.close();
 	}
 
+	/**
+	 * Remove cow from database when removeButton Clicked
+	 * @throws SQLException
+	 * @throws IOException
+	 */
 	@FXML
 	void remove() throws SQLException, IOException {
 		ConnectionSource connectionSource =
@@ -179,6 +204,10 @@ public class CowManagerController {
 		warningCowLabel.setText("");
 	}
 	
+	/**
+	 * load ShowAllCow.fxml when show button Clicked
+	 * @throws IOException
+	 */
 	@FXML
 	void show() throws IOException {
 		Stage primaryStage = new Stage();

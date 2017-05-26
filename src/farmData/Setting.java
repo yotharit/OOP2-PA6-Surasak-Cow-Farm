@@ -2,7 +2,11 @@ package farmData;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-
+/**
+ * Setting class use with OrmLite
+ * @author Tharit Pongsaneh
+ *
+ */
 @DatabaseTable(tableName = "Setting")
 public class Setting {
 

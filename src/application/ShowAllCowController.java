@@ -27,8 +27,14 @@ import javafx.scene.control.TreeTableColumn.CellDataFeatures;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 
+/**
+ * Controller for ShowAllCow.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class ShowAllCowController implements Initializable {
 
+	//FXML Attributes
 	@FXML
 	private JFXTreeTableView<CowRow> cowTable;
 
@@ -41,6 +47,9 @@ public class ShowAllCowController implements Initializable {
 	@FXML
 	private JFXButton refreshButton;
 
+	/**
+	 * Run when fxml loaded
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -123,6 +132,11 @@ public class ShowAllCowController implements Initializable {
 
 }
 
+/**
+ * Keep Row Information
+ * @author Tharit Pongsaneh
+ *
+ */
 class CowRow extends RecursiveTreeObject<CowRow> {
 
 	StringProperty cowID;

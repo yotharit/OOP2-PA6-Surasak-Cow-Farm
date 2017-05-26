@@ -14,6 +14,11 @@ import farmData.Bill;
 import farmData.Cow;
 import farmData.Setting;
 
+/**
+ * Connection Source & Dao Utility Method
+ * @author Tharit Pongsaneh
+ *
+ */
 public class ConnectionUtil {
 	private static ConnectionUtil instance = null;
 	private ConnectionSource source;
@@ -35,6 +40,10 @@ public class ConnectionUtil {
 		}
 	}
 	
+	/**
+	 * Get Connection Util instance 
+	 * @return
+	 */
 	public static ConnectionUtil getInstance(){
 		if(instance == null){
 			instance = new ConnectionUtil();

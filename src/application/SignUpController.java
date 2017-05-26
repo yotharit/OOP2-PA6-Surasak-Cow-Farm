@@ -17,6 +17,11 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 
+/**
+ * Controller for SignUp.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class SignUpController {
 
 	private ConnectionUtil connectionUtil = ConnectionUtil.getInstance();
@@ -54,6 +59,10 @@ public class SignUpController {
 	@FXML
 	private Label warningLabel;
 
+	/**
+	 * Action for clear Button
+	 * @param event
+	 */
 	@FXML
 	void clear(ActionEvent event) {
 		surnameField.clear();
@@ -66,6 +75,10 @@ public class SignUpController {
 		dateField.setValue(null);
 	}
 
+	/**
+	 * create account to database when signup button clicked
+	 * @param event
+	 */
 	@FXML
 	void signUp(ActionEvent event) {
 		if(surnameField.getText().isEmpty() || idField.getText().isEmpty() || addressField.getText().isEmpty()

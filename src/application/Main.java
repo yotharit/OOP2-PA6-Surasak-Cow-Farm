@@ -6,9 +6,16 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-
+/**
+ * Main class use to run Application
+ * @author Tharit Pongsaneh
+ *
+ */
 public class Main extends Application {
 	
+	/**
+	 * Load Login.fxml
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -23,6 +30,10 @@ public class Main extends Application {
 		}
 	}
 	
+	/**
+	 * launch the program
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

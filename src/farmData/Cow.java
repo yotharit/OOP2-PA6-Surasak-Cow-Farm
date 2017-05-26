@@ -2,7 +2,11 @@ package farmData;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-
+/**
+ * Cow class use with OrmLite
+ * @author Tharit Pongsaneh
+ *
+ */
 @DatabaseTable(tableName = "Cow")
 public class Cow {
 

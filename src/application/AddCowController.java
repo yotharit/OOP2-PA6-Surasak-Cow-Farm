@@ -22,8 +22,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 
+/**
+ * AddCowController Work as a controller Class for AddCow.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class AddCowController implements Initializable {
 
+	
+	//FXML Attributes
 	@FXML
 	private JFXDatePicker importedDate;
 
@@ -66,6 +73,9 @@ public class AddCowController implements Initializable {
     @FXML
     private JFXTextField importedPrice;
 	
+    /**
+     * Initialize when fxml is load
+     */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -76,6 +86,10 @@ public class AddCowController implements Initializable {
 
 	}
 
+	/**
+	 * Clear Field when clear button clicked
+	 * @param e
+	 */
 	@FXML
 	void clear(ActionEvent e){
 		height.clear();
@@ -89,11 +103,21 @@ public class AddCowController implements Initializable {
 		importedPrice.clear();
 	}
 
+	/**
+	 * Empty action need to bind it with commbobox
+	 * @param e
+	 */
 	@FXML
 	void onComboChanged(ActionEvent e) {
 
 	}
-
+	
+	/**
+	 * Add Cow when add button clicked
+	 * @param event
+	 * @throws SQLException
+	 * @throws IOException
+	 */
 	@FXML
 	void addCow(ActionEvent event) throws SQLException, IOException{
 		if(height.getText().isEmpty() || weight.getText().isEmpty() || specificLook.getText().isEmpty() 

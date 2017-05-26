@@ -3,7 +3,11 @@ package farmData;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
-
+/**
+ * Bill class use with OrmLite
+ * @author Tharit Pongsaneh
+ *
+ */
 @DatabaseTable(tableName = "Bill")
 public class Bill {
 

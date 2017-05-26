@@ -37,10 +37,16 @@ import javafx.scene.control.TreeTableColumn.CellDataFeatures;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 
+/**
+ * Controller for SellingManagement.fxml
+ * @author tharitpongsaneh
+ *
+ */
 public class SellingManagementController implements Initializable {
 
 	private int currentRowNumber = 0;
 
+	//FXML Attributes
 	@FXML
 	private JFXTextField billIDfield;
 
@@ -80,6 +86,9 @@ public class SellingManagementController implements Initializable {
 	@FXML
 	private JFXTreeTableView<BillRow> sellTable;
 
+	/**
+	 * Run when FXML loaded add action to each fxml elements
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -317,6 +326,11 @@ public class SellingManagementController implements Initializable {
 
 }
 
+/**
+ * Class use to Keep Row information
+ * @author Tharit Pongsaneh
+ *
+ */
 class BillRow extends RecursiveTreeObject<BillRow> {
 
 	StringProperty rowNo;

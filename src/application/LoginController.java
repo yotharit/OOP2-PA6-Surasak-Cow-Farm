@@ -22,10 +22,17 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
+/**
+ * LoginController work as Login.fxml's Controller
+ * @author Tharit Pongsaneh
+ *
+ */
 public class LoginController  {
 
+	//Connection Util Invoke
 	private ConnectionUtil connectionUtil = ConnectionUtil.getInstance();
 	
+	//FXML Attributes
 	@FXML
 	private JFXButton loginButton;
 
@@ -41,6 +48,12 @@ public class LoginController  {
 	@FXML
 	private JFXButton signupButton;
 
+	/**
+	 * Load Login.fxml if input is correct run when loginButton Clicked
+	 * @param event
+	 * @throws IOException
+	 * @throws SQLException
+	 */
 	@FXML
 	void login(ActionEvent event) throws IOException, SQLException{
 		//change this if logic
@@ -82,6 +95,11 @@ public class LoginController  {
 		}
 	}
 
+	/**
+	 * load Signup.fxml when signupButton Clicked
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	void signup(ActionEvent event) throws IOException {
 		Stage primaryStage = new Stage();

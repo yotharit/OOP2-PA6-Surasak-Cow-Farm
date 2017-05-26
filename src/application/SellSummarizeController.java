@@ -26,8 +26,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * Controller for SellSummarize.fxml
+ * @author Tharit Pongsaneh
+ *
+ */
 public class SellSummarizeController implements Initializable {
 
+	//FXML Attributes
 	@FXML
 	private JFXTextField sellingCountField;
 
@@ -46,6 +52,9 @@ public class SellSummarizeController implements Initializable {
 	@FXML
 	private JFXButton refreshButton;
 
+	/**
+	 * Run when FXML Loaded
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		final Node rootIcon = new ImageView(
