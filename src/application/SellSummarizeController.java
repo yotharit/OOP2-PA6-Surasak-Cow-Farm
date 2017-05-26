@@ -91,6 +91,7 @@ public class SellSummarizeController implements Initializable {
 			}
 			totalAssetField.setText("" + assetSum);
 			buyingCostField.setText("" + importedPrice);
+			
 
 			
 			for (Cow cow : cowList) {
@@ -162,6 +163,7 @@ public class SellSummarizeController implements Initializable {
 				totalAssetField.setText("" + assetSum);
 				buyingCostField.setText("" + importedPrice);
 				connectionSource.close();
+				
 			} catch (SQLException | IOException e) {
 				// TODO: handle exception
 			}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.0" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="application.LoginController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/LoginController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="227" width="210" x="309" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="application.CowRow" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/ShowAllCowController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="245" width="195" x="559" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="application.AddCowController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/AddCowController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="407" width="230" x="794" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="application.SellSummarizeController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/SellSummarizeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="209" width="225" x="1064" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="application.SignUpController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/SignUpController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="335" width="191" x="1329" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="application.Main" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="119" width="125" x="1560" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="application.SettingController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/SettingController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="317" width="225" x="1725" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="application.SellHistoryController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/SellHistoryController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="191" width="263" x="1990" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="application.ShowAllCowController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/ShowAllCowController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="173" width="253" x="2293" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="application.SellingManagementController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/SellingManagementController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="371" width="243" x="2586" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="application.BillRow" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/SellingManagementController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="353" width="248" x="2869" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="application.MainController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/MainController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="173" width="225" x="3157" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="application.CowManagerController" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/CowManagerController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="569" width="232" x="3422" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="application.HistoryRow" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/SellHistoryController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="353" width="269" x="3694" y="-42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
