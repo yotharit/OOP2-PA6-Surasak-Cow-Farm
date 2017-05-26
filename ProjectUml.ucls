@@ -4,7 +4,7 @@
   router="FAN">  
   <class id="1" language="java" name="application.LoginController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/LoginController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="227" width="210" x="309" y="-42"/>    
+    <position height="209" width="210" x="2176" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -13,7 +13,7 @@
   </class>  
   <class id="2" language="java" name="application.CowRow" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/ShowAllCowController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="245" width="195" x="559" y="-42"/>    
+    <position height="245" width="195" x="41" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -22,7 +22,7 @@
   </class>  
   <class id="3" language="java" name="application.AddCowController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/AddCowController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="407" width="230" x="794" y="-42"/>    
+    <position height="407" width="230" x="844" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -31,7 +31,7 @@
   </class>  
   <class id="4" language="java" name="application.SellSummarizeController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/SellSummarizeController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="209" width="225" x="1064" y="-42"/>    
+    <position height="209" width="225" x="1685" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -40,7 +40,7 @@
   </class>  
   <class id="5" language="java" name="application.SignUpController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/SignUpController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="335" width="191" x="1329" y="-42"/>    
+    <position height="317" width="185" x="2426" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -49,7 +49,7 @@
   </class>  
   <class id="6" language="java" name="application.Main" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="125" x="1560" y="-42"/>    
+    <position height="119" width="125" x="3695" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -58,7 +58,7 @@
   </class>  
   <class id="7" language="java" name="application.SettingController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/SettingController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="317" width="225" x="1725" y="-42"/>    
+    <position height="317" width="225" x="3860" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -67,7 +67,7 @@
   </class>  
   <class id="8" language="java" name="application.SellHistoryController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/SellHistoryController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="191" width="263" x="1990" y="-42"/>    
+    <position height="191" width="263" x="276" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -76,7 +76,7 @@
   </class>  
   <class id="9" language="java" name="application.ShowAllCowController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/ShowAllCowController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="173" width="253" x="2293" y="-42"/>    
+    <position height="173" width="253" x="4354" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -85,7 +85,7 @@
   </class>  
   <class id="10" language="java" name="application.SellingManagementController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/SellingManagementController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="371" width="243" x="2586" y="-42"/>    
+    <position height="371" width="243" x="1402" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -94,7 +94,7 @@
   </class>  
   <class id="11" language="java" name="application.BillRow" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/SellingManagementController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="353" width="248" x="2869" y="-42"/>    
+    <position height="353" width="248" x="1114" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -103,7 +103,7 @@
   </class>  
   <class id="12" language="java" name="application.MainController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/MainController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="173" width="225" x="3157" y="-42"/>    
+    <position height="173" width="225" x="579" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -112,7 +112,7 @@
   </class>  
   <class id="13" language="java" name="application.CowManagerController" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/CowManagerController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="569" width="232" x="3422" y="-42"/>    
+    <position height="569" width="232" x="2909" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -121,13 +121,82 @@
   </class>  
   <class id="14" language="java" name="application.HistoryRow" project="OOP2-PA6-SurasakFarm" 
     file="/OOP2-PA6-SurasakFarm/src/application/SellHistoryController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="353" width="269" x="3694" y="-42"/>    
+    <position height="353" width="269" x="3181" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
+  <class id="15" language="java" name="application.util.ConnectionUtil" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/application/util/ConnectionUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="371" width="237" x="2301" y="1078"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="farmData.Cow" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/farmData/Cow.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1001" width="218" x="2651" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="farmData.Setting" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/farmData/Setting.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="263" width="189" x="4125" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="farmData.Bill" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/farmData/Bill.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="353" width="186" x="1950" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="farmData.Account" project="OOP2-PA6-SurasakFarm" 
+    file="/OOP2-PA6-SurasakFarm/src/farmData/Account.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="515" width="165" x="3490" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="20">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="21" name="instance"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="24" name="connectionUtil"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="27" name="connectionUtil"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

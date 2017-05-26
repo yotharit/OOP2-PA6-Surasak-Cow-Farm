@@ -13,7 +13,6 @@ import com.j256.ormlite.support.ConnectionSource;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeView;
-import com.sun.glass.ui.ClipboardAssistance;
 
 import farmData.Account;
 import farmData.Bill;
