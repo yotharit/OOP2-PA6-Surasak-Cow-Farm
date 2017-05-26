@@ -13,6 +13,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 
+import application.util.ConnectionUtil;
 import farmData.Account;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +22,8 @@ import javafx.scene.control.Label;
 
 public class SignUpController {
 
+	private ConnectionUtil connectionUtil = ConnectionUtil.getInstance();
+	
 	@FXML
 	private JFXTextField nameField;
 
@@ -74,12 +77,10 @@ public class SignUpController {
 			warningLabel.setText("Input Missing Information!!!");
 		}
 		else {
-			String databaseUrl = "jdbc:h2:mem:account";
 			try {
-				ConnectionSource connectionSource =
-						new JdbcConnectionSource("jdbc:mysql://35.189.162.227:3306/sukprasert","root","1234");
-				Dao<Account, String> accountDao = DaoManager.createDao(connectionSource, Account.class);
-				TableUtils.createTableIfNotExists(connectionSource, Account.class);
+				ConnectionSource connectionSource = connectionUtil.getSource();
+				Dao<Account, String> accountDao = connectionUtil.getAccountDao();
+				connectionUtil.createAccountTable();
 				Account account = new Account();
 				String username = usernameField.getText();
 				String password = passwordField.getText();

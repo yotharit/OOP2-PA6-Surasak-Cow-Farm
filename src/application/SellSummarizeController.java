@@ -145,6 +145,22 @@ public class SellSummarizeController implements Initializable {
 				}
 				settingItem.getChildren().add(new TreeItem<String>("Cow-Price:" + setting.getCowPrice() + " Baht"
 						+ " Fertilizer-Price:" + setting.getFertilizerPrize() +" Baht"));
+				
+				int count = billList.size();
+				double sum = 0;
+				for (Bill bill : billList) {
+					sum += Double.parseDouble(bill.getSumPrice());
+				}
+				sellingCountField.setText(count + "");
+				totalIncomeField.setText(sum + "");
+				double assetSum = 0;
+				double importedPrice = 0;
+				for (Cow cow : cowList) {
+					assetSum += Double.parseDouble(cow.getWeight()) * setting.getCowPrice();
+					importedPrice += Double.parseDouble(cow.getImportPrice());
+				}
+				totalAssetField.setText("" + assetSum);
+				buyingCostField.setText("" + importedPrice);
 				connectionSource.close();
 			} catch (SQLException | IOException e) {
 				// TODO: handle exception

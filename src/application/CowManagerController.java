@@ -86,6 +86,9 @@ public class CowManagerController {
 	private Label warningCowLabel;
 
 	@FXML
+    private JFXButton showButton;
+
+	@FXML
 	void addCow() throws IOException {
 		Stage primaryStage = new Stage();
 		Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/AddCow.fxml"));
@@ -174,5 +177,16 @@ public class CowManagerController {
 		cowDao.delete(cow);
 		connectionSource.close();
 		warningCowLabel.setText("");
+	}
+	
+	@FXML
+	void show() throws IOException {
+		Stage primaryStage = new Stage();
+		Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/ShowAllCow.fxml"));
+		Scene loginScene = new Scene(root);
+		loginScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		primaryStage.setScene(loginScene);
+		primaryStage.setResizable(false);
+		primaryStage.show();
 	}
 }

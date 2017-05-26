@@ -11,7 +11,9 @@ import com.j256.ormlite.table.TableUtils;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.mysql.jdbc.Connection;
 
+import application.util.ConnectionUtil;
 import farmData.Account;
 import farmData.Setting;
 import javafx.event.ActionEvent;
@@ -28,6 +30,8 @@ import javafx.scene.Node;
 
 public class LoginController  {
 
+	private ConnectionUtil connectionUtil = ConnectionUtil.getInstance();
+	
 	@FXML
 	private JFXButton loginButton;
 
@@ -46,14 +50,13 @@ public class LoginController  {
 	@FXML
 	void login(ActionEvent event) throws IOException, SQLException{
 		//change this if logic
-		ConnectionSource connectionSource =
-				new JdbcConnectionSource("jdbc:mysql://35.189.162.227:3306/sukprasert","root","1234");
-		Dao<Account, String> accountDao = DaoManager.createDao(connectionSource, Account.class);
-		TableUtils.createTableIfNotExists(connectionSource, Account.class);
+		ConnectionSource connectionSource = connectionUtil.getSource();
+		Dao<Account, String> accountDao = connectionUtil.getAccountDao();
+		connectionUtil.createAccountTable();
 		if(accountDao.idExists(userfNameText.getText())){
 			Account account = accountDao.queryForId(userfNameText.getText());
 			if(account.getPassword().equals(passwordText.getText())){
-				Dao<Setting, String> settingDao = DaoManager.createDao(connectionSource, Setting.class);
+				Dao<Setting, String> settingDao = connectionUtil.getSettingDao();
 				TableUtils.createTableIfNotExists(connectionSource, Setting.class);
 				if(settingDao.idExists("default")){
 					Setting setting = settingDao.queryForId("default");

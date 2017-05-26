@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ShowAllCowController">
+   <children>
+      <JFXTreeTableView fx:id="cowTable" layoutX="14.0" layoutY="43.0" prefHeight="343.0" prefWidth="373.0" />
+      <JFXTextField fx:id="numTable" focusColor="#e7474d" layoutX="14.0" layoutY="12.0" />
+      <JFXButton fx:id="findButton" layoutX="171.0" layoutY="11.0" ripplerFill="#ffb7b7" style="-fx-background-color: #e7474d;" text="FIND" textFill="WHITE" />
+      <JFXButton fx:id="refreshButton" layoutX="227.0" layoutY="11.0" ripplerFill="#ffb7b7" style="-fx-background-color: #e7474d;" text="REFRESH" textFill="WHITE" />
+   </children>
+</AnchorPane>
